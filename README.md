@@ -20,43 +20,47 @@ This project involved deploying a static HTML-based cybersecurity awareness webs
 - **GitHub Repository:** [https://github.com/mobeensharif02/ICT171-Assignment2-Mobeen](https://github.com/mobeensharif02/ICT171-Assignment2-Mobeen)
 
 ---
-
 ## Steps to Reproduce the Server
 
 ### 1. Launch EC2 Instance on AWS
-- Select **Ubuntu 22.04 LTS**
-- Choose instance type: `t2.micro`
-- Create/download key pair: `mobeen-project-key.pem`
-- Configure Security Group:
-  - Allow port `22` (SSH), `80` (HTTP), `443` (HTTPS)
+- Ubuntu 22.04 LTS
+- t2.micro instance
+- Allow ports 22 (SSH), 80 (HTTP), and 443 (HTTPS)
+- Key Pair: `mobeen-project-key.pem`
 
-### 2. SSH into Your EC2 Instance
+### 2. SSH into Your EC2
 ```bash
 ssh -i "mobeen-project-key.pem" ubuntu@54.79.239.149
-
-## Update System and Install Apache
 sudo apt update
 sudo apt install apache2 -y
-
-## Enable UFW Firewall & Allow Web Ports
-sudo ufw allow 'Apache Full'
-sudo ufw enable
-
-## Enable HTTPS With Self-signed SSL
+sudo apt install openssl
+```
+### 3. Secure Apache with SSL (self-signed)
+```
 sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 \
 -keyout /etc/ssl/private/apache-selfsigned.key \
 -out /etc/ssl/certs/apache-selfsigned.crt
-
 sudo a2enmod ssl
 sudo a2ensite default-ssl.conf
-
 sudo nano /etc/apache2/sites-available/default-ssl.conf
-# Update SSLCertificateFile and SSLCertificateKeyFile paths
-
-sudo systemctl reload apache2
-Now access the site via https://54.79.239.149
 ```
-### References & Acknowledgements
+### 4. Update these two lines:
+```
+SSLCertificateFile      /etc/ssl/certs/apache-selfsigned.crt
+SSLCertificateKeyFile   /etc/ssl/private/apache-selfsigned.key
+```
+### 5.Then Reload Apache
+```
+sudo systemctl reload apache2
+```
+### 6. Replace Web Content which you can find in "index.html" repository
+```
+sudo nano /var/www/html/index.html
+
+```
+After pasting the code press CTRL + O and press Enter to save.
+Press CTRL + X to exit
+## References & Acknowledgements
 
 - Apache2 monitoring script inspired by community solution:  
   https://askubuntu.com/questions/611953/check-if-apache-is-running-else-start-apache
