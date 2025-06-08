@@ -7,9 +7,9 @@
 status=$(systemctl is-active apache2)
 
 if [ "$status" = "active" ]; then
-  echo "✅ Apache2 is running."
+  echo " Apache2 is running."
 else
-  echo "❌ Apache2 is not running. Restarting..."
+  echo " Apache2 is not running. Restarting..."
   sudo systemctl start apache2
-  echo "🔄 Apache2 restarted."
+  echo " Apache2 restarted."
 fi
