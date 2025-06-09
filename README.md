@@ -72,6 +72,39 @@ Press CTRL + X to exit
   https://www.openssl.org/docs/manmaster/man1/openssl-req.html
 
 - EC2 setup and hosting practices learned through ICT171 lectures, labs, and AWS documentation.
+## 📸 Project Screenshots
+
+### 1. Apache2 Default Webpage
+This shows the default Apache2 page before uploading our own HTML content.
+![Apache Default Page](screenshots/ubuntu.png)
+
+### 2. SSH Connection to EC2
+Successfully connected using `.pem` key.
+![SSH Connection](screenshots/ssh connection.png)
+
+### 3. GitHub Repository with Files
+Repository structure and version control view.
+![GitHub Files](screenshots/github.png)
+
+### 4. Hosted Website Home Page
+This shows the live cybersecurity awareness site.
+![Cybersecurity Website](screenshots/website.png)
+
+### 5. Password Checker & Quiz Interaction
+Demonstrating quiz and password checker functionality.
+![Quiz Result](screenshots/website con.png)
+
+### 6. Self-Signed SSL Access
+Website running securely over HTTPS (with warning due to self-signed certificate).
+![HTTPS Enabled](screenshots/https.png)
+
+### 7. Apache Running Status
+Apache server status showing as `active (running)`.
+![Apache Status](screenshots/apache running.png)
+
+### 8. Web Files Directory in EC2
+Verifying that `index.html` and `cyber.jpg` are in `/var/www/html/`
+![Web Files List](screenshots/web content list.png)
 
 
 
