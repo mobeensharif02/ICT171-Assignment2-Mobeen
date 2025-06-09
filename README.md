@@ -12,7 +12,11 @@
 This project involved deploying a static HTML-based cybersecurity awareness website hosted on a cloud-based Ubuntu EC2 instance provided by Amazon Web Services (AWS). The site was set up with Apache2, secured using a self-signed SSL certificate, and integrated with GitHub for version control. The goal was to simulate a real-world IaaS deployment scenario while documenting each step for reproducibility and learning.
 
 ---
+## 🎥 Video Explainer
 
+You can watch the full project walkthrough video here:  
+[Click to watch on YouTube](https://youtu.be/L64WzEIzRw4)
+---
 ## Public Access Details
 
 - **Public IP Address:** `54.79.239.149`  
