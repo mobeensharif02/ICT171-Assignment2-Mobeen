@@ -80,7 +80,7 @@ This shows the default Apache2 page before uploading our own HTML content.
 
 ### 2. SSH Connection to EC2
 Successfully connected using `.pem` key.
-![SSH Connection](screenshots/ssh connection.png)
+![SSH Connection](screenshots/ssh_connection.png)
 
 ### 3. GitHub Repository with Files
 Repository structure and version control view.
@@ -92,7 +92,7 @@ This shows the live cybersecurity awareness site.
 
 ### 5. Password Checker & Quiz Interaction
 Demonstrating quiz and password checker functionality.
-![Quiz Result](screenshots/website con.png)
+![Quiz Result](screenshots/website_con.png)
 
 ### 6. Self-Signed SSL Access
 Website running securely over HTTPS (with warning due to self-signed certificate).
@@ -100,11 +100,11 @@ Website running securely over HTTPS (with warning due to self-signed certificate
 
 ### 7. Apache Running Status
 Apache server status showing as `active (running)`.
-![Apache Status](screenshots/apache running.png)
+![Apache Status](screenshots/apache_running.png)
 
 ### 8. Web Files Directory in EC2
 Verifying that `index.html` and `cyber.jpg` are in `/var/www/html/`
-![Web Files List](screenshots/web content list.png)
+![Web Files List](screenshots/web_content_list.png)
 
 
 
